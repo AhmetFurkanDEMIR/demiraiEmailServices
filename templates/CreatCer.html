@@ -1,0 +1,54 @@
+<!Doctype HTML>
+{% extends "layout.html" %}
+<html>
+<head>
+<meta charset="UTF-8"/>
+<title>Automatic Certificate Generation</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+</head>
+<style type="text/css">
+</style>
+{% include "includes/navbar.html"%}
+<body class="container">
+
+{% block body %}
+<h3>Automatic Certificate Generation</h3>
+<hr>
+{% from "includes/formhelpers.html" import render_field %}
+<form method = "post" enctype="multipart/form-data">
+  <br />
+      {{ render_field(form.title,class = "form-control") }}
+      {{ render_field(form.content,class = "form-control") }}
+      {{render_field(form.file,class = "form-control")}}
+      {{render_field(form.draft,class = "form-control")}}
+      {{render_field(form.punto,class = "form-control",type = "number")}}
+      {{render_field(form.font,class = "form-control")}}
+       <br>
+       <b> Color </b>
+       <input type="color" name="renk" id = "kutu" style="margin-left:100px;" ><br><br>
+      {{render_field(form.v,class = "form-control",type = "number")}}
+      {{render_field(form.mail,class = "form-control")}}
+      {{render_field(form.password,class = "form-control")}}
+
+      <br>
+        <input type="checkbox" id="TTLS" name="TTLS" value="True" checked>
+        <label for="TTLS"><b>TTLS</b></label><br><br>
+
+        <input type="checkbox" id="SSL" name="SSL" value="True">
+        <label for="SSL"><b>SSL</b></label><br><br>
+
+      {{render_field(form.host,class = "form-control")}}
+      {{render_field(form.port,class = "form-control")}}
+      <button type="submit" class="btn btn-danger">Generate and send certificates</button>
+      <br><br>
+  </form>
+{% endblock body %}
+
+        <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+        <script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+</body>
+</html>

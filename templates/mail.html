@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+
+{% block body %}
+<h3>Bulk Mail Sending</h3>
+<hr>
+<br />
+
+{% from "includes/formhelpers.html" import render_field %}
+
+<form method = "post" enctype="multipart/form-data">
+        {{ render_field(form.title,class = "form-control") }}
+        {{ render_field(form.content,class ="form-control") }}
+        {{ render_field(form.file,class ="form-control") }}
+        {{ render_field(form.mail,class ="form-control") }}
+        {{ render_field(form.password,class ="form-control") }}
+        <br>
+        <input type="checkbox" id="TTLS" name="TTLS" value="True" checked>
+        <label for="TTLS"><b>TTLS</b></label><br><br>
+
+        <input type="checkbox" id="SSL" name="SSL" value="True">
+        <label for="SSL"><b>SSL</b></label><br><br>
+        {{ render_field(form.host,class = "form-control") }}
+        {{ render_field(form.port,class = "form-control") }}
+
+    <button type="submit" class="btn btn-danger">Send mails</button>
+    <br><br>
+</form>
+
+{% endblock body %}
