@@ -4,7 +4,7 @@
 
 This application allows you to send automatic mass mail and automatic mass certificates to the people in your mailing list, moreover, it is completely free and open source.
 
-Your mailing list (.csv file) must have "Name" and "Email" columns, the remaining columns depend on the person using the application, use the "$" key to use these columns in the text, for example: "$Name", "$Email", Like "$ day", "$ id".
+Your mailing list (.csv file) must have "Name" and "Email" columns, the remaining columns depend on the person using the application, use the "$" key to use these columns in the text, for example: "$Name", "$Email", Like "$day", "$id".
 
 Mail settings are automatically configured for Gmail, if you are going to use another email provider, please review the settings again. You must turn on the Low-security apps setting for Gmail, [click to turn this setting on](https://www.google.com/settings/security/lesssecureapps).
 
