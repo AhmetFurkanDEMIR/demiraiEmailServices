@@ -11,4 +11,5 @@ Mail settings are automatically configured for Gmail, if you are going to use an
 
 **Application video**
 
-![](https://user-images.githubusercontent.com/54184905/120176158-a0065680-c20f-11eb-9aa1-780e81ef2417.mp4)
+[V](https://user-images.githubusercontent.com/54184905/120176158-a0065680-c20f-11eb-9aa1-780e81ef2417.mp4)
+
